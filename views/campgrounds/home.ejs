@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/home.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <title>YelpCamp</title>
+    </head>
+    <body>
+        <section>
+            <input type="checkbox" id="check" />
+            <header>
+                <h2>
+                    <a href="/" class="logo">YelpCamp</a>
+                </h2>
+                <div class="navigation">
+                    <a href="/">Home</a>
+                    <a href="/campgrounds">Campgrounds</a>
+                    <a href="/campgrounds/new">New campground</a>
+                    <% if (!currentUser) { %>
+                    <a href="/login">Login</a>
+                    <a href="/register">Register</a>
+                    <% } else { %>
+                    <a href="/logout">Logout</a>
+                    <% } %>
+                </div>
+                <label for="check">
+                    <i class="fa-solid fa-bars menu-btn"></i>
+                    <i class="fa-solid fa-xmark close-btn"></i>
+                </label>
+            </header>
+            <div class="content">
+                <div class="info">
+                    <h2>
+                        Welcome <br />
+                        <span>to YelpCamp</span>
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate doloremque laudantium excepturi odit ratione a
+                        dolores commodi non quisquam cupiditate. Praesentium
+                        pariatur itaque laboriosam quas veniam doloribus nam
+                        eaque similique?
+                    </p>
+                    <a href="/campgrounds" class="campgrounds-btn"
+                        >All campgrounds</a
+                    >
+                </div>
+            </div>
+            <div class="media-icons">
+                <a href="https://www.facebook.com/"
+                    ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://twitter.com/"
+                    ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com/"
+                    ><i class="fa-brands fa-instagram"></i
+                ></a>
+            </div>
+        </section>
+    </body>
+</html>
